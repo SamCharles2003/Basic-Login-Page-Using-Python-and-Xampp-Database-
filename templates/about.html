@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Successfull</title>
+</head>
+<style>
+  body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+    
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    transform: scale(1.1);
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  header {
+    background-color: #009688;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    max-height:50px;
+
+  }
+
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      text-align: center;
+    }
+  }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: transform .2s;
+    colour:white;
+    }
+    
+    
+      .lines_container {
+    display: inline-block;
+    cursor: pointer;
+    justify-content:left;
+    padding:10px;
+    transition: transform .2s;
+    colour:white;
+    }
+    
+    
+    .bar1:hover,
+    .bar2:hover,
+    .bar3:hover {
+        transform: scale(1.5);
+    }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  max-width: 600px; /* Adjust the max-width to a suitable value */
+  white-space: normal; /* Allow content to wrap to the next line */
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+  background: #FFFFFF;
+  border: 1px solid #000;
+  overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
+}
+</style>
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "500px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+
+<body>
+
+  
+  <header>
+
+    <div class="line_container" onclick="openNav()">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+
+</div>
+  </header>
+
+  <footer>
+    Sam Charles &copy;
+  </footer>
+
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href= "/teacher"> Home</a>
+    <a href="/about">About</a>
+    <a href="/internal_1">Internal Test 1</a>
+    <a href="/contact">Contacts</a>
+    <a href="/">Logout<a>
+      <a> Logged is as {{email}}</a>    
+  </div>
+
+  <p class="container">Sam Charles stands out for his unwavering determination and relentless work ethic in pursuing his aims and goals. Whether it's excelling in competitions, honing his skills in electronics and coding, or mastering musical instruments, Sam approaches every endeavor with a focused and dedicated mindset. His commitment to continuous learning and improvement is evident in his pursuit of excellence. Sam's determination not only propels him towards personal success but also serves as an inspiration to those around him. He is a true embodiment of perseverance, consistently pushing boundaries and striving for the realization of his aspirations.</P>
+
+
+</body>
+</html>

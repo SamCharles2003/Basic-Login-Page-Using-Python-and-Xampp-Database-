@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Successfull</title>
+</head>
+<style>
+  body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  header {
+    background-color: #009688;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    max-height:50px;
+
+  }
+
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      text-align: center;
+    }
+  }
+  .bar1, .bar2, .bar3 {
+width: 35px;
+height: 5px;
+background-color: #333;
+margin: 6px 0;
+transition: transform .2s;
+colour:white;
+}
+
+
+  .lines_container {
+display: inline-block;
+cursor: pointer;
+justify-content:left;
+padding:10px;
+transition: transform .2s;
+colour:white;
+}
+
+.fa-instagram:hover,
+.fa-facebook:hover,
+.fa-linkedin:hover,
+.lines_container:hover,
+.bar1:hover,
+.bar2:hover,
+.bar3:hover {
+    transform: scale(1.5);
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    transition: transform .2s;
+    background: #3B5998;
+    color: white;
+  }
+  .fa-instagram {
+    transition: transform .2s;
+    background: rgb(131,58,180);
+    background:  linear-gradient(45deg, #f9ce34 0%, #ee2a7b  0%,#6228d7 100%);
+    color: white;
+    
+  }
+  .fa-linkedin
+  {transition: transform .2s;
+    background: #0077b5 ;
+    color: white;
+  }
+
+</style>
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "500px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+  }
+</script>
+
+<body>
+
+  
+  <header>
+
+    <div class="line_container" onclick="openNav()">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+
+</div>
+  </header>
+
+  <footer>
+    Sam Charles &copy;
+  </footer>
+
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href= "/teacher"> Home</a>
+    <a href="/about">About</a>
+    <a href="/internal_1">Internal Test 1</a>
+    <a href="/contact">Contacts</a>
+    <a href="/">Logout<a>
+    <a> Logged is as {{email}}</a>    
+  </div>
+
+  <a href="https://www.facebook.com/profile.php?id=100022247045533" class="fa fa-facebook"></a>
+  <a href="https://www.instagram.com/_the.contended.common_/" class="fa fa-instagram"></a>
+  <a href="https://www.linkedin.com/in/sam-charles-02b4a1250/" class="fa fa-linkedin"></a>
+  
+
+
+
+
+</body>
+</html>

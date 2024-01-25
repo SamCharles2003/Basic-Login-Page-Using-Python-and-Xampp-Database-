@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <style>
+       .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:auto;
+    min-height: 300px;
+    width: 100%;
+    max-width: 500px;
+    overflow-x: auto; /* Enable horizontal scroll for food items */
+    white-space: nowrap; /* Prevent food items from wrapping to the next line */
+    margin-right: 10px; /* Add some margin between food items */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 100%);
+    border: 1px solid #000;
+}
+
+
+.zoom {
+  transition: transform .2s;
+  colour:white;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+        body {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+               display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              min-height: 100vh;
+              margin: 0;
+              background: rgb(131,58,180);
+              background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 59%, rgba(252,176,69,1) 100%);
+             box-shadow: inset 0px 0px 85px rgba(0, 0, 0, 0.4);
+             background-size: cover;
+        }
+
+        form {
+            max-width: 300px;
+        }
+
+        input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid #ccc;
+            border-radius:20px;
+            box-sizing: border-box;
+            display: block;
+            font-size: .875rem;
+            margin-bottom: 1rem;
+            padding: .275rem;
+            width: 100%;
+        }
+
+
+
+        input[type="password"] {
+            margin-bottom: .5rem;
+            colour:white;
+        }
+
+        input[type="submit"] {
+            background-color: #015294;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+        }
+
+        label {
+            color: #666;
+            font-size: .875rem;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+<h1 style="color:white;">Hello,Dear User....</h1>
+<div class="container">
+    <form action="{{url_for('check_user')}}" method="POST">
+
+         {% if mesage is defined and mesage %}
+			<div class="error_message">{{ mesage }}</div>
+		{% endif %}
+
+		<div class="form-group">
+			<label style="color:white;" for="email">Email:</label>
+			<input class="zoom" type="email"  id="email" name="email" placeholder="Enter email" name="email" autocomplete="on">
+		</div>
+
+		<div class="form-group">
+			<label style="color:white;" for="password">Password:</label>
+			<input class="zoom"  type="password" id="password" name="password" placeholder="Enter password" name="password" autocomplete="on">
+		</div>
+
+		<input class="zoom" type="submit" ></input>
+
+        <h5 class="zoom" style="color:white;" >Did you <a href="/forgot_password">forget password?</a></h5>
+        <h5 class="zoom " style="color:white;" >Not Registered yet? <a href="/sign_up">Sign Up here</a></h5>
+
+    </form>
+</div>
+
+</body>
+
+</html>
