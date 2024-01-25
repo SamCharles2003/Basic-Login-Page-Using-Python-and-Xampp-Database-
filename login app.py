@@ -143,11 +143,11 @@ def confirmation_email(email):
         # Email configuration (update with your SMTP server details)
         smtp_server = "smtp.gmail.com"
         smtp_port = 587
-        smtp_username = "samcharles290@gmail.com"
-        smtp_password = "tcud zgsz mjsk nokp"
+        smtp_username = "" ## Your SMTP mail
+        smtp_password = "" ##Your SMTP Password
 
         # Sender and recipient email addresses
-        sender_email = "samcharles290@gmail.com"
+        sender_email = "" ## your Sender mail
 
         # Create a MIME object to represent the email
         message = MIMEMultipart()
@@ -195,11 +195,11 @@ def send_otp_email(email,otp):
         # Email configuration (update with your SMTP server details)
         smtp_server = "smtp.gmail.com"
         smtp_port = 587
-        smtp_username = "samcharles290@gmail.com"
-        smtp_password = "tcud zgsz mjsk nokp"
+        smtp_username = "" ## Your Smtp mail
+        smtp_password = "" ## Your Smtp Password
 
         # Sender and recipient email addresses
-        sender_email = "samcharles290@gmail.com"
+        sender_email = "" ## Your Sender mail
 
         # Create a MIME object to represent the email
         message = MIMEMultipart()
@@ -309,11 +309,11 @@ def signup_send_otp_email(email,otp):
         recipient_email=email
         smtp_server = "smtp.gmail.com"
         smtp_port = 587
-        smtp_username = "samcharles290@gmail.com"
-        smtp_password = "tcud zgsz mjsk nokp"
+        smtp_username = "" ## your SMTP Username
+        smtp_password = "" ## your Smtp password
 
         # Sender and recipient email addresses
-        sender_email = "samcharles290@gmail.com"
+        sender_email = "" ## Your Sender mail
 
         # Create a MIME object to represent the email
         message = MIMEMultipart()
